@@ -24,10 +24,12 @@ By leveraging AI, this project moved from a basic concept to a polished, physics
 * **Canvas Optimization:** Efficiently clearing and redrawing text layers without performance drops.
 * **Visual Polish:** Implementing advanced canvas techniques like `strokeText` and `shadowBlur` to solve visibility issues instantly.
 
-> "This isn't just code; it's a collaborative masterpiece that shows how AI acts as a force multiplier for individual developers, turning a fun idea into a professional-grade visual experience."
-> "In present time you got an idea you can turn it into reality.
-
----
+>This project demonstrates how AI-assisted development can accelerate
+experimentation. The concept and creative direction were human-driven,
+while AI tools helped with algorithm implementation, canvas rendering
+techniques, and rapid iteration during development.
+>Today, AI tools allow developers to rapidly transform ideas into
+working prototypes and interactive experiences.
 
 ## How to Use
 
