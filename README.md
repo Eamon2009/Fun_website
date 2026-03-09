@@ -1,10 +1,10 @@
-# 🖱️ [my code] vs. THE VOID: An Interactive Cursor Experiment
+#  [my code] vs. THE VOID: An Interactive Cursor Experiment
 
 A high-performance, visually striking browser experiment where your cursor is transformed into the developer's struggle. Watch as **`[my code]`** desperately maneuvers to stay ahead of a trailing sequence of high-visibility **`BUG`** and **`ERROR`** entities, all set against a backdrop of raw source code.
 
 ---
 
-## 🚀 Features<img width="1919" height="1014" alt="Screenshot 2026-03-09 115731" src="https://github.com/user-attachments/assets/5c96a528-f75e-4c08-ba9a-c00582b98f36" />
+##  Features<img width="1919" height="1014" alt="Screenshot 2026-03-09 115731" src="https://github.com/user-attachments/assets/5c96a528-f75e-4c08-ba9a-c00582b98f36" />
 
 
 * **Custom Text-Cursor:** The default OS cursor is hidden and replaced with a neon-cyan `[my code]` pointer for total immersion.
@@ -15,7 +15,7 @@ A high-performance, visually striking browser experiment where your cursor is tr
 
 ---
 
-## 🤖 The Power of AI in Modern Coding
+##  The Power of AI in Modern Coding
 
 This project is a prime example of **Human-AI Symbiosis**. While the creative direction and "vibe" were human-led, the heavy lifting of the implementation was powered by **Gemini AI**. 
 
@@ -25,10 +25,11 @@ By leveraging AI, this project moved from a basic concept to a polished, physics
 * **Visual Polish:** Implementing advanced canvas techniques like `strokeText` and `shadowBlur` to solve visibility issues instantly.
 
 > "This isn't just code; it's a collaborative masterpiece that shows how AI acts as a force multiplier for individual developers, turning a fun idea into a professional-grade visual experience."
+> "In present time you got an idea you can turn it into reality.
 
 ---
 
-## 🎮 How to Use
+## How to Use
 
 1.  **Clone** or copy the code from `index.html`.
 2.  **Open** the file in any modern web browser.
@@ -36,7 +37,7 @@ By leveraging AI, this project moved from a basic concept to a polished, physics
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **HTML5 Canvas API** - Core rendering engine.
 * **Vanilla JavaScript** - Logic and physics (no external libraries needed).
