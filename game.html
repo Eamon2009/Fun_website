@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <title>Ultra-Visible Code Trail</title>
+       <style>
+              body {
+                     margin: 0;
+                     overflow: hidden;
+                     /* Background code image */
+                     background: #0d1117 url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+                     background-size: cover;
+                     cursor: none;
+              }
+
+              canvas {
+                     display: block;
+              }
+       </style>
+</head>
+
+<body>
+       <canvas id="canvas"></canvas>
+
+       <script>
+              const canvas = document.getElementById("canvas");
+              const ctx = canvas.getContext("2d");
+
+              let width, height;
+              const segments = [];
+              const segmentCount = 20;
+              const segmentLength = 18; // Slightly more space so words don't overlap
+
+              let mouse = { x: -200, y: -200 };
+
+              function resize() {
+                     width = canvas.width = window.innerWidth;
+                     height = canvas.height = window.innerHeight;
+              }
+
+              window.addEventListener("resize", resize);
+              window.addEventListener("mousemove", (e) => {
+                     mouse.x = e.clientX;
+                     mouse.y = e.clientY;
+              });
+
+              for (let i = 0; i < segmentCount; i++) {
+                     segments.push({ x: mouse.x, y: mouse.y });
+              }
+
+              function update() {
+                     segments[0].x = mouse.x;
+                     segments[0].y = mouse.y;
+
+                     for (let i = 1; i < segments.length; i++) {
+                            const dx = segments[i - 1].x - segments[i].x;
+                            const dy = segments[i - 1].y - segments[i].y;
+                            const angle = Math.atan2(dy, dx);
+                            segments[i].x = segments[i - 1].x - Math.cos(angle) * segmentLength;
+                            segments[i].y = segments[i - 1].y - Math.sin(angle) * segmentLength;
+                     }
+              }
+
+              function draw() {
+                     ctx.clearRect(0, 0, width, height);
+                     ctx.textAlign = "left";
+                     ctx.textBaseline = "middle";
+
+                     // 1. Draw "bug" and "error" with high contrast
+                     for (let i = segments.length - 1; i > 0; i--) {
+                            // Drawing every 5th segment for a clear trail
+                            if (i % 5 === 0) {
+                                   const time = Date.now() * 0.005;
+                                   const pulse = Math.sin(time + i) * 3; // Subtle sizing pulse
+
+                                   ctx.font = `bold ${16 + pulse}px monospace`;
+
+                                   // Shadow for "glow" effect
+                                   ctx.shadowBlur = 10;
+                                   ctx.shadowColor = "#ff0000";
+
+                                   // White Outline (Stroke) for maximum visibility against dark code
+                                   ctx.strokeStyle = "white";
+                                   ctx.lineWidth = 3;
+                                   const word = i % 10 === 0 ? "BUG" : "ERROR";
+                                   ctx.strokeText(word, segments[i].x + 20, segments[i].y);
+
+                                   // Solid Red Fill
+                                   ctx.fillStyle = "#ff1111";
+                                   ctx.fillText(word, segments[i].x + 20, segments[i].y);
+
+                                   ctx.shadowBlur = 0; // Reset for performance
+                            }
+                     }
+
+                     // 2. Draw "[my code]" Cursor
+                     ctx.font = "bold 20px monospace";
+                     ctx.shadowBlur = 15;
+                     ctx.shadowColor = "#00f2ff";
+
+                     // White stroke for cursor too
+                     ctx.strokeStyle = "white";
+                     ctx.lineWidth = 2;
+                     ctx.strokeText("[my code]", segments[0].x, segments[0].y);
+
+                     ctx.fillStyle = "#00f2ff";
+                     ctx.fillText("[my code]", segments[0].x, segments[0].y);
+
+                     ctx.shadowBlur = 0;
+              }
+
+              function animate() {
+                     update();
+                     draw();
+                     requestAnimationFrame(animate);
+              }
+
+              resize();
+              animate();
+       </script>
+</body>
+
+</html>
