@@ -4,7 +4,8 @@ A high-performance, visually striking browser experiment where your cursor is tr
 
 ---
 
-## 🚀 Features
+## 🚀 Features<img width="1919" height="1014" alt="Screenshot 2026-03-09 115731" src="https://github.com/user-attachments/assets/5c96a528-f75e-4c08-ba9a-c00582b98f36" />
+
 
 * **Custom Text-Cursor:** The default OS cursor is hidden and replaced with a neon-cyan `[my code]` pointer for total immersion.
 * **Inverse Kinematics (IK) Physics:** Smooth, organic "snake-like" trailing motion that reacts dynamically to your mouse speed and direction.
@@ -50,5 +51,5 @@ This was built as a **fun side project** to celebrate the "controlled chaos" of 
 
 ---
 
-### 📜 License
-MIT License - Feel free to use this for your own portfolio or site!
+### License
+MIT License - Feel free to use!
