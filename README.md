@@ -55,4 +55,4 @@ This was built as a **fun side project** to celebrate the "controlled chaos" of 
 ---
 
 ### License
-MIT License - Feel free to use!
+    MIT
