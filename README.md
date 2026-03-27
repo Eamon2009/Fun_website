@@ -52,7 +52,4 @@ working prototypes and interactive experiences.
 
 This was built as a **fun side project** to celebrate the "controlled chaos" of software development. It’s a literal representation of the phrase "chasing bugs." Feel free to fork this, change the text to your own tech stack, or adjust the "gravity" of the trail to make the errors even more aggressive!
 
----
 
-### License
-    MIT
